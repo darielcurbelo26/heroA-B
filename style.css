@@ -1,0 +1,443 @@
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga'1, 'calt'1;
+    /* fix for Chrome */
+}
+
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: InterVariable, sans-serif;
+    }
+}
+
+* {
+    font-family: "InterVariable";
+    font-size: 16px;
+    color: black;
+    line-height: 120%;
+
+
+}
+
+a {
+    padding: 0px !important;
+    margin: 0px !important;
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+p {
+
+    font-weight: 600;
+}
+
+
+.hero {
+    height: 100vh;
+    width: 100vw;
+    background: #F03226;
+}
+
+.hero2 {
+    width: 100vw;
+    height: 100vh;
+    background: #FFFFF5;
+}
+
+.navbar-transparent a {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.navbar-transparent a {
+    color: black;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.navbar-transparent a:hover {
+    color: black;
+}
+
+.hero-text {}
+
+.btn-custom {
+    background-color: #000 !important;
+    /* fondo negro */
+    color: #FFFFF5 !important;
+    /* texto casi blanco */
+    border: none;
+    /* sin borde */
+    border-radius: 0rem !important;
+    /* esquinas redondeadas */
+}
+
+/* Cambio de color al pasar el mouse */
+.btn-custom:hover {
+    background-color: #222 !important;
+    /* un negro un poco más claro */
+    color: #FFFFF5 !important;
+}
+
+.fw-bold {
+    font-weight: 900;
+}
+
+.text-fixed {
+    position: fixed;
+    width: 100vw;
+    transform: scale(1.04);
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+
+    /* Valor por defecto (medio) */
+    bottom: -2%;
+    /* valor intermedio */
+}
+
+/* Pantallas grandes */
+@media (min-width: 1200px) {
+    .text-fixed {
+        bottom: -3%;
+        /* más cerca de la parte inferior */
+    }
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 768px) {
+    .text-fixed {
+        bottom: -3%;
+        /* más abajo en móviles */
+    }
+}
+
+
+.custom-gap {
+    gap: 1.5rem;
+}
+
+.custom-position {
+    position: relative;
+    top: -20%
+}
+
+.custom-position2 {
+    position: relative;
+}
+
+.ilustracion {
+    position: absolute;
+    width: clamp(650px, 50vw, 690px);
+    bottom: -4rem;
+    left: 6.5rem;
+}
+
+.ilustracion2 {
+    position: static;
+    width: 46vw;
+    bottom: -4rem;
+    left: 6.5rem;
+}
+
+
+@media (max-width: 995px) {
+    .ilustracion {
+        left: 0rem;
+
+    }
+}
+
+
+
+
+
+.ilustracion-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ilustracion-container2 {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Por defecto: visibles */
+.op-secundarias {
+    display: block;
+    /* o inline/inline-block según tu diseño */
+}
+
+.redondo2 {
+    background: #F03226 !important;
+
+
+}
+
+/* Ocultar en pantallas pequeñas */
+@media (max-width: 768px) {
+    .op-secundarias {
+        display: none !important;
+    }
+
+    .ilustracion-container {
+        display: absolute !important;
+        width: 100vw;
+        height: 50vh;
+        top: 0;
+        left: 0;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+
+    .ilustracion {
+        width: 70% !important;
+        max-width: 320px !important;
+        /* eliminar el límite */
+
+
+        position: static;
+        margin-top: 6rem;
+
+    }
+
+    .ilustracion-container2 {
+        display: absolute !important;
+        width: 100vw;
+        height: 50vh;
+        top: -2%;
+        left: 0;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .ilustracion2 {
+
+        width: 50vw !important;
+        /* eliminar el límite */
+
+
+        position: static;
+        margin-top: 16vh;
+
+    }
+
+    #bg-letras {
+        display: none;
+    }
+
+    .hero {
+
+        background: #FFFFF5;
+    }
+    
+        .hero2 {
+
+        padding-bottom: 4rem;;
+    }
+
+
+    .text-fixed {
+        display: none !important;
+        position: static !important;
+
+
+    }
+
+    .redondo {
+        background: #F03226 !important;
+
+
+    }
+
+
+}
+
+/* Opcional: ocultar en pantallas grandes */
+@media (min-width: 1200px) {
+    .op-secundarias {
+        display: block !important;
+    }
+}
+
+
+.custom-column {
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .custom-column {
+        width: 100%;
+        flex-direction: column;
+        /* apila elementos verticalmente */
+        align-items: center;
+        /* horizontalmente centrado */
+        justify-content: flex-end;
+        /* vertical: abajo */
+        height: 100vh;
+        /* ocupa toda la pantalla */
+    }
+}
+
+.text-clamp,
+.text-clamp span {
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+}
+
+    {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+
+
+
+
+.text-decoration {
+    font-size: 26vw;
+    line-height: 1;
+    font-weight: 600;
+    width: 100%;
+    color: #FFFFF5;
+    text-align: center;
+    font-variation-settings: 'wght'600;
+    animation: weightShift 2.8s ease-in-out infinite alternate;
+
+}
+
+@keyframes weightShift {
+    0% {
+        font-variation-settings: 'wght'600;
+    }
+
+    100% {
+        font-variation-settings: 'wght'400;
+    }
+}
+
+#cabello {
+    transform-box: fill-box;
+    transform-origin: 50% 0%;
+    /* Centro horizontal, parte superior */
+    animation: sway 3s ease-in-out infinite alternate;
+    vector-effect: non-scaling-stroke;
+}
+
+/* Oscilación suave del cabello */
+@keyframes sway {
+    0% {
+        transform: translateY(7px) rotate(-2deg);
+    }
+
+    100% {
+        transform: translateY(7px) rotate(2deg);
+    }
+}
+
+
+#ojos {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: raise 3s ease-in-out infinite alternate;
+    /* 👈 quitada la coma final */
+}
+
+/* Movimiento de los ojos */
+@keyframes raise {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-2px);
+    }
+}
+
+#cejas {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: raiseCejas 3s ease-in-out infinite alternate;
+    /* 👈 sin coma final y nombre válido */
+}
+
+/* Movimiento de las cejas */
+@keyframes raiseCejas {
+    0% {
+        transform: translateY(-2px);
+    }
+
+    100% {
+        transform: translateY(8px);
+    }
+}
+
+
+#letra {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: tilt3D 2.4s ease-in-out infinite alternate;
+    vector-effect: non-scaling-stroke;
+}
+
+/* Animación: inclinación y perspectiva vertical */
+@keyframes tilt3D {
+    0% {
+        transform: translateX(-8%) translateY(0%) rotate(-20deg);
+    }
+
+    100% {
+        transform: translateX(-16%) translateY(6%) rotate(2deg);
+    }
+}
+
+
+.h1 {
+    color: #000;
+    font-family: "Inter Variable";
+    font-size: clamp(24px, 5vw, 32px) !important;
+    font-weight: 900 !important;
+    line-height: 100%;
+    /* 32px */
+    text-transform: uppercase;
+    /*animation: weightShift 2.8s ease-in-out infinite alternate;*/
+
+}
+
+
+.btn-cambiar {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    padding: 8px 10px !important;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.15);
+    color: black;
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+/* Efecto hover */
+.btn-cambiar:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
