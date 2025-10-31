@@ -249,6 +249,9 @@ p {
         padding-bottom: 4rem;;
     }
 
+    body {
+                background: #FFFFF5;
+    }
 
     .text-fixed {
         display: none !important;
@@ -405,7 +408,7 @@ p {
 
 .h1 {
     color: #000;
-    font-family: "Inter Variable";
+    font-family: "InterVariable" !important;
     font-size: clamp(24px, 5vw, 32px) !important;
     font-weight: 900 !important;
     line-height: 100%;
